@@ -1,6 +1,46 @@
-# Myapp
+# The Taqwa Tracker Developer Portal
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+
+## Overview
+
+This project is a developer portal for the Taqwa Tracker API, an application that provides essential tools and services for the Muslim community. The portal serves as a centralized hub for developers to explore, test, and integrate the Taqwa Tracker API into their own applications.
+
+## Implemented Features
+
+- **Developer Authentication**: A secure login page to authenticate developers before granting access to the portal.
+- **Role-Based Access Control**: The system restricts access to developers with the "developer" role, ensuring that only authorized personnel can view the API documentation.
+- **Protected API Documentation**: The `/docs` route is protected by an authentication guard, preventing unauthorized access to the interactive API documentation.
+- **Interactive API Explorer**: A comprehensive documentation section that allows authenticated developers to test the Taqwa Tracker API endpoints in real-time.
+
+## Project File Structure
+
+```
+.
+├── angular.json
+├── dist/
+├── GEMINI.md
+├── node_modules/
+├── package.json
+├── package-lock.json
+├── public/
+├── README.md
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── docs/
+│   │   │   └── login/
+│   │   ├── guards/
+│   │   ├── interceptors/
+│   │   └── services/
+│   ├── environments/
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+├── tsconfig.app.json
+├── tsconfig.json
+└── tsconfig.spec.json
+```
 
 ## Development server
 
