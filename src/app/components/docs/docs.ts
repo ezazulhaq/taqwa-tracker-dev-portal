@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { HeaderComponent } from '../header/header';
 import { environment } from '../../../environments/environments';
 import { AuthService } from '../../services/auth';
 import { HttpClient } from '@angular/common/http';
@@ -8,17 +8,16 @@ declare const SwaggerUIBundle: any;
 
 @Component({
   selector: 'app-docs',
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './docs.html',
   styleUrl: './docs.css',
 })
 export class DocsComponent implements OnInit {
 
   authService = inject(AuthService);
-  router = inject(Router);
   http = inject(HttpClient);
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     // Load Swagger UI scripts
@@ -62,10 +61,5 @@ export class DocsComponent implements OnInit {
         });
       }
     });
-  }
-
-  logout(): void {
-    this.authService.logout();
-    this.router.navigate(['/login']);
   }
 }

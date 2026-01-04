@@ -1,28 +1,14 @@
-<div class="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
-    <!-- Header -->
-    <div class="bg-white shadow-sm border-b border-emerald-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div
-                    class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
-                    <span class="text-white font-bold text-lg">T</span>
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold text-gray-900">Taqwa Tracker API</h1>
-                    <p class="text-xs text-gray-500">Developer Documentation</p>
-                </div>
-            </div>
-            <button (click)="logout()"
-                class="px-4 py-2 text-sm font-medium text-emerald-700 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition-colors">
-                Logout
-            </button>
-        </div>
-    </div>
+<div class="h-screen flex flex-col overflow-hidden app-bg">
+    <!-- Header Component -->
+    <app-header></app-header>
 
-    <!-- Swagger UI Container -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div class="bg-white rounded-xl shadow-lg overflow-auto">
-            <div id="swagger-ui" style="min-height: 600px; height: calc(100vh - 180px);"></div>
+    <!-- Scrollable Content Area -->
+    <main class="flex-1 overflow-y-auto mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div
+                class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:border-slate-700">
+                <div id="swagger-ui" class="bg-white dark:bg-white" style="min-height: 600px;"></div>
+            </div>
         </div>
-    </div>
+    </main>
 </div>
